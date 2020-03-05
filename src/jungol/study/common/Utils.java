@@ -5,8 +5,6 @@ import java.util.Scanner;
 
 public class Utils {
 	
-	public Scanner sc = new Scanner(System.in);
-	
 	public long timer() {
 		System.out.println(">>> Start");
 		return new Date().getTime();
