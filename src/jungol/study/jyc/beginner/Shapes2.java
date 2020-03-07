@@ -22,36 +22,39 @@ public class Shapes2 implements Shapes2Impl {
 //		별삼각형2
 		long ms = u.timer();
 
-		int n = 9;
-		int m = 1;
+		int n = 5;
+		int m = 3;
+
+		int d = n / 2;
 		
-		int d = n / 2 + 1;
-
-		for (int i = 0; i < n; i++) {
-
-//			종류1
-			if (i <= m)
-				System.out.println(getStar(n, 0, i));
-			else
-				System.out.println(getStar(n, 0, n-i));
+//		Type 1
+		if (m == 1) {
+			for (int i = 0; i < n; i++) {
+				
+				for (int j = 0; j <= d - Math.abs(d-i); j++)
+					System.out.print("* ");
+				
+				System.out.println();
+			}
 		}
+
+//		Type 2
+		if (m == 2) {
+			for (int i = 0; i < n; i++) {
+				
+				for (int j = 0; j < Math.abs(d-i); j++)
+					System.out.print("  ");
+				
+				for( int j = 0; j <= d - Math.abs(d-i); j++)
+					System.out.print("* ");
+				
+				System.out.println();
+			}
+		}
+
+//		Type3
 
 		u.timer(ms);
-	}
-
-	public String getStar(int width, int start, int end) {
-
-		String str = "";
-
-		for (int i = 0; i < width; i++) {
-
-			if (i >= start && i <= end)
-				str += "* ";
-			else
-				str += "  ";
-		}
-
-		return str;
 	}
 
 	@Override
