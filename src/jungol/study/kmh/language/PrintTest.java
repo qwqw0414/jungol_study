@@ -37,4 +37,36 @@ public class PrintTest {
 	public void test7() {
 		System.out.println("5 Dan\n5 * 2 = 10");
 	}
+	/*
+	 public static int solution(int[][] board, int[] moves) {
+		Stack<Integer> stack = new Stack<>();
+        int answer = 0;
+        
+		for(int i=0;i<moves.length;i++){
+			for(int j=0;j<board.length;j++){
+				if(board[j][moves[i]-1]!=0){
+										
+					if(stack.empty()){
+						stack.push(board[j][moves[i]-1]);
+						board[j][moves[i]-1]=0;
+						break;
+					}else if(stack.peek()==board[j][moves[i]-1]){
+						stack.pop();
+						board[j][moves[i]-1]=0;
+						answer+=2;
+						break;
+					}else{
+						stack.push(board[j][moves[i]-1]);
+						board[j][moves[i]-1]=0;
+						break;
+					}
+					
+				}
+					
+			}
+		}	
+        return answer;
+    } 
+
+	 */
 }
